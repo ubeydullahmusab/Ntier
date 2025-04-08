@@ -1,0 +1,57 @@
+﻿@using DL.Models
+@model List<Kisi>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="row">
+    <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+        <div class="card flex-fill">
+            <div class="card-header">
+
+                <h5 class="card-title mb-0">Projedeki Kişiler</h5>
+            </div>
+            <table class="table table-hover my-0">
+
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Adı</th>
+                        <th>Soyadı</th>
+                        <th>Cinsiyet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+
+                                    <form method="post" asp-controller="Kisi" asp-route-id="@item.Id" asp-action="Sil" onsubmit="return confirm('Bu kişiyi silmek istediğinize emin misiniz?');">
+                                        @Html.AntiForgeryToken()
+
+                                        <button type="submit" class="btn btn-danger">Sil</button>
+
+                                    </form>
+                                    <form method="post" asp-controller="Kisi" asp-route-id="@item.Id" asp-action="Guncelle" onsubmit="return confirm('Bu kişiyi güncellemek istediğinize emin misiniz?');">
+                                        @Html.AntiForgeryToken()
+
+                                        <button type="submit" class="btn btn-success">Güncelle</button>
+
+                                    </form>
+                                </td>
+                                <td>@item.Adı</td>
+                                <td>@item.Soyadı</td>
+                                <td>@item.Cinsiyet</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
