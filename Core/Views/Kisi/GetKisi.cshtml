@@ -1,0 +1,36 @@
+﻿@using DL.Models
+
+
+<form method="post" asp-controller="Kisi" asp-action="Kaydet">
+
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">KİŞİ KAYIT</h5>
+                </div>
+                <div class="card-body">
+                    <input type="text" name="adı" class="form-control" placeholder="Adı">
+                </div>
+                <div class="card-body">
+                    <input type="text" name="soyadı" class="form-control" placeholder="Soyadı">
+                </div>
+                <div class="card-body">
+                    <input type="text" name="cinsiyet" class="form-control" placeholder="Cinsiyet">
+                </div>
+                <div class="card-body">
+                    <div class="mb-3 text-sm-end">
+
+                        <button class="btn btn-danger " type="submit">Kaydet</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</form>
