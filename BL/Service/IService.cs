@@ -10,7 +10,7 @@ namespace BL.Service
     public interface IService
     {
         Task<List<Kisi>> GetAll();
-        Kisi? GetById(int id);
+        Kisi? GetById(int id); 
         void Add(Kisi kisi);
         void Update(Kisi kisi); 
         void Delete(int id);
