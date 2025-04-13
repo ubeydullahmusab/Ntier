@@ -12,11 +12,7 @@ namespace BL.Service
         Task<List<Kisi>> GetAll();
         Kisi? GetById(int id);
         void Add(Kisi kisi);
-<<<<<<< HEAD
         void Update(Kisi kisi); 
-=======
-        void Update(Kisi kisi);
->>>>>>> 593e67366a53dc4b88d3c2570fe7d6da20ceee32
         void Delete(int id);
     }
 }
