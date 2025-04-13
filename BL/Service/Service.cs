@@ -18,7 +18,11 @@ namespace BL.Service
         }
         public void Add(Kisi kisi)
         {
+<<<<<<< HEAD
             repository.Add(kisi); 
+=======
+            repository.Add(kisi);
+>>>>>>> 593e67366a53dc4b88d3c2570fe7d6da20ceee32
         }
 
         public void Delete(int id)

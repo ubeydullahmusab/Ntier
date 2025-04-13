@@ -8,13 +8,23 @@ namespace Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
+<<<<<<< HEAD
     { 
+=======
+    {
+>>>>>>> 593e67366a53dc4b88d3c2570fe7d6da20ceee32
         private readonly IService bs;
         public ValuesController(IService _service)
         {
             bs = _service;
+<<<<<<< HEAD
         } 
           
+=======
+        }
+
+
+>>>>>>> 593e67366a53dc4b88d3c2570fe7d6da20ceee32
         [HttpGet("GetKisiler")]
         public async Task< IActionResult> GetKisiler()
         {
